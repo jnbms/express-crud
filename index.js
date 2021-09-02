@@ -9,6 +9,8 @@ import path from 'path'
 const __dirname = path.resolve()
 // nunjucks
 import nunjucks from 'nunjucks'
+// 분리 작성된 route 가져오기
+import router from './server/routes/router.js'
 
 const app = express()
 
@@ -36,16 +38,8 @@ app.use('/css',express.static(path.resolve(__dirname,'assets/css')))
 // app.use('/js',express.static(path.resolve(__dirname,'assets/js')))
 // app.use(express.static(path.join(__dirname,)))
 
-app.get('/',(req,res)=>{
-    // res.send("CRUD Application")
-
-    res.render('index',{
-        message:"FIRST Message",
-        online:true,
-    })
-    // render(view,[locals],callback)
-    // local 이란 optional parmeter로 loal variables for the view 이다.
+app.use('/',router)
 
 
-})
+
 app.listen(PORT,()=>{console.log(`server is running on http://localhost:${PORT}`)})

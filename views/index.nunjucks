@@ -6,11 +6,11 @@
 </head>
 {# include #}
 <body>
-<div>ASD EE</div>
 {# local parameter로 보내진 boolean 값으로 조건 분기를 나눌 수 있다. #}
 {% if online %}
 {% include "header.nunjucks"%}
 <div style='color:blue;'>It's Online</div>
+<div>whre i go</div>
 {% else %}
 <div>It's Offline</div>
 {% endif %}
