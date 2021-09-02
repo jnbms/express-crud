@@ -1,12 +1,12 @@
 import express from 'express'
-const app = express()
-import Dotenv from 'dotenv'
-Dotenv.config()
+import dotenv from 'dotenv'
 
-const port = process.env.PORT || 3000
+const app = express()
+
+dotenv.config()
+const PORT = process.env.PORT || 8080
 
 app.get('/',(req,res)=>{
-    res.send("HELLO GITHUB")
+    res.send("CRUD Application")
 })
-
-app.listen(port)
+app.listen(PORT,()=>{console.log(`server is running on http://localhost:${PORT}`)})
