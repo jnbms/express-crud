@@ -1,11 +1,30 @@
-
+{# CSS 연결하기 #}
+<head>
+<meta charset='UTF-8'>
+<title>Express-CURD</title>
+<link rel="stylesheet" type="text/css" href="/css/styles.css" />
+</head>
 {# include #}
-<div>ASD</div>
+<body>
+<div>ASD EE</div>
 {# local parameter로 보내진 boolean 값으로 조건 분기를 나눌 수 있다. #}
 {% if online %}
 {% include "header.nunjucks"%}
-<div>It's Online</div>
+<div style='color:blue;'>It's Online</div>
 {% else %}
 <div>It's Offline</div>
 {% endif %}
 
+<from action="/" method="POST">
+    <table class="table">
+        <thead class="thead-dark">
+            <tr>
+                <th>ID</th>
+                <th>Name</th>
+                <th>Email</th>
+            </tr>
+        </thead>
+    </table>
+</from>
+
+</body>

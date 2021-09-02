@@ -31,10 +31,10 @@ nunjucks.configure(path.resolve(__dirname,'views'),{
 })
 
 // load assets
-app.use('/css',express.static(path.resolve(__dirname,'asset/css')))
-app.use('/img',express.static(path.resolve(__dirname,'asset/img')))
-app.use('/js',express.static(path.resolve(__dirname,'asset/js')))
-
+app.use('/css',express.static(path.resolve(__dirname,'assets/css')))
+// app.use('/img',express.static(path.resolve(__dirname,'assets/img')))
+// app.use('/js',express.static(path.resolve(__dirname,'assets/js')))
+// app.use(express.static(path.join(__dirname,)))
 
 app.get('/',(req,res)=>{
     // res.send("CRUD Application")
