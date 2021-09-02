@@ -12,6 +12,9 @@ import nunjucks from 'nunjucks'
 // 분리 작성된 route 가져오기
 import router from './server/routes/router.js'
 
+import connectDB from './server/database/connection.js'
+connectDB()
+
 const app = express()
 
 dotenv.config()

@@ -4,4 +4,10 @@ const homeRoutes = (req,res) => {
         online:true
     })
 }
-export {homeRoutes}
+const addUser = (req,res) => {
+    res.render('add_user')
+}
+// updateUser
+ 
+
+export {homeRoutes, addUser}
